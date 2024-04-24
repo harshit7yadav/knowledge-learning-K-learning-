@@ -7,17 +7,12 @@ const server=http.createServer((req,res)=>{
     res.setHeader('Content-type','text/html');
     if(req.url==='/' || req.url==='/home'){
         res.statusCode=200;
-        const data=fs.readFileSync('.//index.html');
+        const data=fs.readFileSync('./index.html');
         res.end(data.toString());
     }
     else if(req.url==='/login'){
         res.statusCode=200;
-        const data=fs.readFileSync('.//index.html');
-        res.end(data.toString());
-    }
-    else if(req.url==='signup'){
-        res.statusCode=200;
-        const data=fs.readFileSync('.//index.html');
+        const data=fs.readFileSync('./registration.html');
         res.end(data.toString());
     }
 });
